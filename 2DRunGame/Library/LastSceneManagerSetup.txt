@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/game background.unity
+- path: Assets/practice scripts.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
