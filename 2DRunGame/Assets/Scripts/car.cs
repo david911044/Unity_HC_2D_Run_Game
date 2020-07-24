@@ -2,15 +2,15 @@
 
 public class car : MonoBehaviour
     {
-    //欄位 field : 储存資料
-    //***** 欄位語法
-    //修飾詞 欄位類型 欄位名稱 (指定 值) 結束符號
+    // 欄位 field : 储存資料
+    //  欄位語法
+    // 修飾詞 欄位類型 欄位名稱 (指定 值) 結束符號
     //* 欄位值以 unity 屬性 (Inspector) 面板為主
 
-    //
-    //
-    //
-    //
+    // 整數 int : 沒有小數點的數值，例：1、100、-999
+    // 浮點數 float : 有小數點的數值，例：1.234、-999.9
+    // 字串 string : 文字，例：紅水、kid@gmail.com、3213salkj
+    // 布林值 bool :是、否，例：true、false
 
     //修飾詞:預設為私人
     //私人 private: 不顯示
@@ -18,7 +18,11 @@ public class car : MonoBehaviour
 
     // 資料  
     // 品牌 、C數 、重量 、顏色 、是否有天窗
-    //欄位的屬性
+    // 欄位的屬性
+    // 語法：[屬性名稱(值)]
+    // 標題 Header("標題")
+    // 提示 Tooltip("提示文字")
+    // 範圍 Range(最小值，最大值) - 僅限於數值類型
     [Header("品牌")]
     public string brand = "賓士";
     [Header("CC 數"), Tooltip("汽車的 CC 數量")]
@@ -45,8 +49,8 @@ public class car : MonoBehaviour
     public Vector4 pos4 = new Vector4(1, 2, 3, 4);
 
     // 儲存物件，元件
-    // 物件：
-    //
+    // 物件：階層 (Hierarchy) 面板內的所有東西
+    // 原件：屬性 (Inspector) 面板內的粗體字 > Class
     public GameObject cam;
     public Transform traCam;
     public Camera cam1;

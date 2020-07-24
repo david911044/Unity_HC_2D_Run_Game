@@ -8,4 +8,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/manu.unity
     guid: 755d2870b5e5e2546970109f3848b558
+  - enabled: 1
+    path: Assets/game background.unity
+    guid: af3c233815ccb164ca33af33d59267fd
   m_configObjects: {}
