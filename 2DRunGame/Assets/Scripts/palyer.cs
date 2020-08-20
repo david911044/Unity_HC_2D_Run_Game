@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Security.AccessControl;
+using UnityEngine;
 
 public class palyer : MonoBehaviour
 {
@@ -20,7 +21,7 @@ public class palyer : MonoBehaviour
     public AudioClip soundCoin;
 
     public Animator ani;
-    public Rigidbody2D rid;
+    public Rigidbody2D rig;, 
     public CapsuleCollider2D cap;
     #endregion
 
@@ -41,8 +42,14 @@ public class palyer : MonoBehaviour
         // true 玩家是否按下空白鍵
         // 布林值 = 輸入.按下按鍵(按鍵列舉. 空白鍵)
         bool space = Input.GetKeyDown(KeyCode.Space);
-        // 動畫控制器.設定布林值("參數名稱，布林值")
-        ani.SetBool("跳躍開關", space);
+
+        if (space)
+        {
+            // 動畫控制器.設定布林值("參數名稱，布林值")
+            ani.SetBool("跳躍開關", true);
+            // 剛體.添加推力(二維向量)
+            rig.Addforce(new Vector2(0, jump));
+        }
     }
 
     /// <summary>
@@ -56,9 +63,23 @@ public class palyer : MonoBehaviour
         ani.SetBool("滑行開關", ctrl);
 
         // 如果 按下 ctrl
-        // 滑行 位移  -0.1 -1.4 尺寸 1.35 1.5
-        // 否則
-        // 站立 位移  -0.1 -0.4 尺寸 1.35 3.6
+        if (ctrl)
+        {
+            // 滑行 位移  -0.1 -1.4 尺寸 1.35 1.5
+            cap.offset = new Vector2(-0.1f, -1.5f);
+            cap.size = new Vector2(1.35f, 1.35f); 
+        }
+         // 否則
+        else
+        {
+            // 站立 位移  -0.1 -0.4 尺寸 1.35 3.6
+            cap.offset = new Vector2(-0.1f, -0.4f);
+            cap.size = new Vector2(1.35f, 3.6f);
+
+        }
+        
+       
+        
     }
 
     /// <summary>
