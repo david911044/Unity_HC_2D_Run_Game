@@ -1,5 +1,5 @@
-﻿using System.Security.AccessControl;
-using UnityEngine;
+﻿using UnityEngine;
+using UnityEngine.UI;
 
 public class palyer : MonoBehaviour
 {
@@ -19,6 +19,9 @@ public class palyer : MonoBehaviour
     public AudioClip soundSlide;
     public AudioClip soundJump;
     public AudioClip soundCoin;
+
+    [Header("金幣數量")]
+    public Text textCoin;
 
     public Animator ani;
     public Rigidbody2D rig; 
@@ -90,7 +93,7 @@ public class palyer : MonoBehaviour
 
         // 如果 按下 左邊 ctrl 播放一次音效
         // 判斷式如果只有一行程式可以省略大括號
-        if (Input.GetKeyDown(KeyCode.LeftControl)) ; aud.PlayOneShot(soundSlide, 0.8f);
+        if (Input.GetKeyDown(KeyCode.LeftControl)) aud.PlayOneShot(soundSlide, 0.8f);
 
         // 如果 按下 ctrl
         if (ctrl)
@@ -117,7 +120,9 @@ public class palyer : MonoBehaviour
     /// </summary>
     private void EatCoin()
     {
-
+        coin++;                                       // 遞增1
+        aud.PlayOneShot(soundCoin, 1.2f);             // 播放音效
+        textCoin.text = "金幣數量：" + coin;          // 文字介面.文字 = 字串 + 整數
     }
 
     /// <summary>

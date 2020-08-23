@@ -206,7 +206,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &104780028 stripped
 Transform:
@@ -2523,7 +2523,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &510026140
 GameObject:
@@ -2650,7 +2650,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &545622513 stripped
 Transform:
@@ -3722,6 +3722,7 @@ GameObject:
   - component: {fileID: 860873027}
   - component: {fileID: 860873026}
   - component: {fileID: 860873025}
+  - component: {fileID: 860873028}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -3788,12 +3789,27 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 860873024}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalPosition: {x: 0, y: 0.76, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &860873028
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 860873024}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eede407e8ad21e14ea40f8031d0740ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 1220360142}
+  speed: 20
+  limite: {x: 0, y: -0.7}
 --- !u!1001 &873950142
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8615,7 +8631,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &984042563
 GameObject:
@@ -8873,7 +8889,7 @@ RectTransform:
   - {fileID: 210093497}
   - {fileID: 1435900150}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -9133,7 +9149,7 @@ Transform:
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &1220360143
 Rigidbody2D:
@@ -9185,7 +9201,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
-  jump: 350
+  jump: 450
   hp: 500
   isGround: 0
   coin: 0
@@ -9193,6 +9209,7 @@ MonoBehaviour:
   soundSlide: {fileID: 8300000, guid: d168d845b8251694f866baaa09cf885c, type: 3}
   soundJump: {fileID: 8300000, guid: bb0e452a1bac7db489c226784620c4cb, type: 3}
   soundCoin: {fileID: 8300000, guid: c433d4307b7da9b409b8a874f53b7dc3, type: 3}
+  textCoin: {fileID: 0}
   ani: {fileID: 1220360140}
   rig: {fileID: 1220360143}
   cap: {fileID: 1220360144}
@@ -9511,7 +9528,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1281465795 stripped
 Transform:
@@ -9577,7 +9594,7 @@ Transform:
   - {fileID: 1281465795}
   - {fileID: 1271323595}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1292452299
 PrefabInstance:
@@ -9658,7 +9675,7 @@ PrefabInstance:
     - target: {fileID: 889036110237647989, guid: 7b0b94302a842d64993e641b85c07b6d,
         type: 3}
       propertyPath: m_RootOrder
-      value: 11
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 1418030355232727544, guid: 7b0b94302a842d64993e641b85c07b6d,
         type: 3}
@@ -12985,7 +13002,7 @@ Transform:
   - {fileID: 1839935342}
   - {fileID: 847379185}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &2003548959 stripped
 Transform:
@@ -13376,7 +13393,7 @@ PrefabInstance:
     - target: {fileID: 6271797944089574569, guid: 2cfcfdff9de3b6b49b417c7fdfe42be5,
         type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6271797944089574569, guid: 2cfcfdff9de3b6b49b417c7fdfe42be5,
         type: 3}
