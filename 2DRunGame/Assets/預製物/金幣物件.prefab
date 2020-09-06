@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3796783357684973797}
   m_Layer: 0
   m_Name: "\u91D1\u5E63\u7269\u4EF6"
-  m_TagString: Untagged
+  m_TagString: "\u91D1\u5E63"
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2261,6 +2261,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: coin
+      objectReference: {fileID: 0}
+    - target: {fileID: 4725357647763683613, guid: 49312df15202ef04086ad16a60b9c330,
+        type: 3}
+      propertyPath: m_TagString
+      value: "\u91D1\u5E63"
       objectReference: {fileID: 0}
     - target: {fileID: 4725357647763683614, guid: 49312df15202ef04086ad16a60b9c330,
         type: 3}

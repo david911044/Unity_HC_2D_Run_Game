@@ -123,6 +123,7 @@ public class palyer : MonoBehaviour
         coin++;                                       // 遞增1
         aud.PlayOneShot(soundCoin, 1.2f);             // 播放音效
         textCoin.text = "金幣數量：" + coin;          // 文字介面.文字 = 字串 + 整數
+        Destroy(obj);
     }
 
     /// <summary>
@@ -148,7 +149,9 @@ public class palyer : MonoBehaviour
     {
 
     }
-    #endregion 事件
+    
+    #endregion
+
 
 
     #region 事件
@@ -163,6 +166,9 @@ public class palyer : MonoBehaviour
         Slide();
         Move();
     }
+
+    // 碰撞事件 ：
+    
 
     // 繪製圖示事件：繪製輔助線條，僅在 Scene 看得到
     private void OnDrawGizmos()
